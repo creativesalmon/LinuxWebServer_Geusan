@@ -2,30 +2,34 @@
 <html>
 	<head>
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no">
-		<title>HomePage</title>
+		<title>HOME_PAGE</title>
 		<link rel="stylesheet" type="text/css" href="css/indexcss.css">
 		<script src="javascript/index_javascript.js"></script>
 	</head>
-	<body style="overflow-x:hidden">
+	<body>
 		<!--
 		<header>
 			<h1 id="title" > Welcome to my sweet home </h1>
 		</header>
 		-->
-		<nav id="menu_bar" class="menu_bar">
+		<nav>
 			<div>
-				<ul>
+				<ul  id="my_menu_bar" class="menu_bar">
+					<li><a href="#intro">Intro</a></li>
 					<li><a href="#section1">First</a></li>
 					<li><a href="#section2">Second</a></li>
 					<li><a href="#section3">Third</a></li>
-					<li id="about" style="float:right" onclick="awesomeFunction()"><a class="activie" href="#about">ABOUT</a></li>
+					<!--<li id="about" style="float:right" onclick="awesomeFunction()"><a class="activie" href="#about">ABOUT</a></li>-->
+					<li class="icon">
+						<a href="javascript:void(0);" onclick="dropDownMenu()">&#9776;</a>
+					</li>
 				</ul>
 			</div>
 		</nav>
 		<div class="content">
-			<section>
+			<section id="intro">
 				<div class="content_child">
-					<p id="demo" class="section_p">dnrken</p>
+					<p id="demo" class="section_p">intro</p>
 				</div>
 			</section>
 			<section id="section1">

@@ -1,22 +1,7 @@
-html {
-	overflow-x: hidden;
-}
-body{
-	width: 100%;
+body {
 	margin: 0;
-	padding: 0;
-	background-color : lightblue;
-	display: block;
-	overflow-x: hidden;
-	scrollbar-face-color: #FFFFFF;
-	scrollbar-hightlight-color: #6365CE;
-	scrollbar-3dlight-color: #FFFFFF;
-	scrollbar-shadow-color: #6365CE;
-	scrollbar-darkshadow-color: #FFFFFF;
-	scrollbar-track-color: #FFFFFF;
-	scrollbar-arrow-color: #6365CE;
+	background-color: #333333;
 }
-
 header {
 	position: fixed;
 	top: 0;
@@ -29,65 +14,71 @@ header {
 	background-color: #333333;
 }
 
-#title {
-	height: inherit;
-	border-radius: 10px;
-	box-sizing: border-box;
-	font-size: 2em;
-	color: #fff;
-	text-align: left;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-
-#menu_bar  {
-	width : inherit;
-	height: 40px;
-	list-style-type: none;
-	top 70px;
-	left: 0;
-	position: fixed;
-	
-}
-
-#menu_bar div {
-	display: inline;
-}
-
-#menu_bar div ul {
+ul.menu_bar  {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background: #333;
+	background-color: #333;
 }
 
-#menu_bar div ul li {
-	padding: 5px;
-	margin: 3px;
+ul.menu_bar li {
 	float: left;
-	color: #fff;
-	border-radius: 5px;
-	border-width: 2px;
-	border-color: #fff;
 }
 
-#menu_bar div ul li:hover {
-	background-color: #111;
-}
-
-#menu_bar div ul li a {
-	color: #fff;
-	display: block;
+ul.menu_bar li a {
+	display: inline-block;
+	color: #f2f2f2;
+	text-align: center;
+	padding:14px 16px;
 	text-decoration: none;
+	transition: 0.3s;
+	font-size: 17px;
 }
 
-#menu_bar div ul li a:hover {
-	color:#dbdbdb
-	text-decoration: underline;
+ul.menu_bar li a:hover {
+	background-color: #555;
 }
 
+ul.menu_bar li.icon {
+	display: none;
+}
+
+/**
+ 	미디어 쿼리문
+ */
+
+@media screen and (max-width: 680px) {
+	ul.menu_bar li:not(:first-child) {
+		display: none;
+	}
+	ul.menu_bar li.icon {
+		float: right;
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width: 680px) {
+	ul.menu_bar.responsive {
+		position: relative;
+	}
+	ul.menu_bar.responsive li.icon {
+		position: absolute;
+		right:0;
+		top: 0;
+	}
+	ul.menu_bar.responsive li {
+		float: none;
+		display: inline;
+	}
+	ul.menu_bar.responsive li a {
+		display: block;
+		text-align: left;
+	}
+}
+/*
+	미디어 쿼리 끝
+ */
 section {
 	padding-top : 150px;
 	background-color: #131313;
