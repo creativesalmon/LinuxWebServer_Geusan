@@ -14,8 +14,14 @@ header {
 	background-color: #333333;
 }
 
+.topnav {
+	margin-top: 0;
+	width: 100%;
+}
+
 ul.menu_bar  {
 	list-style-type: none;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
@@ -79,30 +85,99 @@ ul.menu_bar li.icon {
 /*
 	미디어 쿼리 끝
  */
+
+
 section {
-	padding-top : 150px;
 	background-color: #131313;
-	width: 100%;
 }
 
 .content {
-	overflow: auto;
-	width: 100%;
+
+	overflow: hidden;
 }
 
 .content_child {
-	height: 700px;
-	width: 100%;
 	background: #131313;
+	height: 500px;
 	display: block;
+	overflow: hidden;
 }
 
 .section_p {
 	top: 13px;
-	left: 30%;
+	left: 10%;
 	position: relative;
 	color: #fff;
 	font-size: 4em;
+}
+
+/**
+	view slider
+ */
+#slider {
+	margin: 2em auto;
+	width:960px;
+	overflow: hidden;
+}
+
+#slider-wrapper{
+	z-index: 1;
+	width:9999px;
+	height:300px;
+	position: relative;
+	transition: left 300ms linear;
+}
+
+.slide {
+	float: left;
+	width: 960px;
+	height: 300px;
+	position: relative;
+	overflow: hidden;
+}
+
+.slide img {
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+#slider-nav {
+	z-index: 90;
+}
+
+.caption {
+	margin:0;
+	position: absolute;
+	z-index: 100;
+	bottom:-2em;
+	width:100%;
+	height: 2em;
+	line-height:2;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.6);
+	color: white;
+	transition: bottom 500ms ease-in;
+}
+
+.caption.visible {
+	bottom:0;
+}
+
+#slider-nav a {
+	width: 2em;
+	height: 2em;
+	border: 1px solid #ccc;
+	text-align: center;
+	text-decoration: none;
+	color: #000;
+	display: inline-block;
+	line-height: 2;
+	margin-right: 0.5em;
+}
+
+#slider-nav a.current {
+	border-color: #000;
 }
 
 footer {

@@ -1,58 +1,90 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no">
-		<title>HOME_PAGE</title>
-		<link rel="stylesheet" type="text/css" href="css/indexcss.css">
-		<script src="javascript/index_javascript.js"></script>
-	</head>
-	<body>
-		<!--
-		<header>
-			<h1 id="title" > Welcome to my sweet home </h1>
-		</header>
-		-->
-		<nav>
-			<div>
-				<ul  id="my_menu_bar" class="menu_bar">
-					<li><a href="#intro">Intro</a></li>
-					<li><a href="#section1">First</a></li>
-					<li><a href="#section2">Second</a></li>
-					<li><a href="#section3">Third</a></li>
-					<!--<li id="about" style="float:right" onclick="awesomeFunction()"><a class="activie" href="#about">ABOUT</a></li>-->
-					<li class="icon">
-						<a href="javascript:void(0);" onclick="dropDownMenu()">&#9776;</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-		<div class="content">
-			<section id="intro">
-				<div class="content_child">
-					<p id="demo" class="section_p">intro</p>
-				</div>
-			</section>
-			<section id="section1">
-				<div class="content_child">
-					<p class="section_p">First</p>
-				</div>
-			</section>
-			<section id="section2">
-				<div class="content_child">
-					<p class="section_p">Second</p>
-				</div>
-			</section>
-			<section id="section3">
-				<div class="content_child">
-					<p class="section_p">Third</p>
-				</div>
-			</section>
-		</div>
+<head>
+    <meta charset="utf-8" name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no">
+    <title>HOME_PAGE</title>
+    <link rel="stylesheet" type="text/css" href="css/indexcss.css">
+    <script src="javascript/index_javascript.js"></script>
+</head>
+<body onscroll="scrolldown()">
 
-		<footer>
-			<div class="office_logo">office_logo</div>
-			<div class="office_address">office_address</div>
-			<div class="copyright">copyright</div>
-		</footer>
-	</body>
+<!--
+<header>
+    <h1 id="title" > Welcome to my sweet home </h1>
+</header>
+-->
+<nav class="topnav" id="topnav" style="z-index: 2">
+    <div>
+        <ul id="my_menu_bar" class="menu_bar">
+            <li id="btn_intro" onclick="selectNavItem(this)"><a href="#intro">Intro</a></li>
+            <li id="btn_first" onclick="selectNavItem(this)"><a href="#section1">First</a></li>
+            <li id="btn_second" onclick="selectNavItem(this)"><a href="#section2">Second</a></li>
+            <li id="btn_third" onclick="selectNavItem(this)"><a href="#section3">Third</a></li>
+            <!--<li id="about" style="float:right" onclick="awesomeFunction()"><a class="activie" href="#about">ABOUT</a></li>-->
+            <li class="icon">
+                <a href="javascript:void(0);" onclick="dropDownMenu()">&#9776;</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div style="z-index: 1">
+
+    <div class="content">
+        <section id="intro">
+            <div class="slideShow">
+                <img class="mySlides" src="basicDatas/images/img_1.png" style="width: 100%">
+                <img class="mySlides" src="basicDatas/images/img_2.png" style="width: 100%">
+                <img class="mySlides" src="basicDatas/images/img_3.png" style="width: 100%">
+            </div>
+        </section>
+        <script src="javascript/imgSlideShow.js"></script>
+        <div>
+            <section id="section1">
+                <div class="content_child">
+                    <p class="section_p">First <span id="first">0</span> times</p>
+                </div>
+            </section>
+            <section id="section2">
+                <div class="content_child">
+                    <!--여기부터는 이미지 슬라이더-->
+                    <div id="slider">
+                        <div id="slider-wrapper">
+                            <div class="slide">
+                                <img src="basicDatas/images/img_1.png">
+                                <p class="caption">Caption1</p>
+                            </div>
+                            <div class="slide">
+                                <img src="basicDatas/images/img_2.png">
+                                <p class="caption">Caption2</p>
+                            </div>
+                            <div class="slide">
+                                <img src="basicDatas/images/img_3.png">
+                                <p class="caption">Caption3</p>
+                            </div>
+                        </div>
+                        <div id="slider-nav">
+                            <a href="#" data-slide="0">1</a>
+                            <a href="#" data-slide="1">2</a>
+                            <a href="#" data-slide="2">3</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section3">
+                <div class="content_child">
+                    <p class="section_p">Third</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <div class="office_logo">office_logo</div>
+        <div class="office_address">office_address</div>
+        <div class="copyright">copyright</div>
+    </footer>
+
+</div>
+</body>
 </html>
