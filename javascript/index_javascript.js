@@ -2,11 +2,6 @@
  *    Created by geusan
  */
 
-function awesomeFunction() {
-    document.getElementById("demo").innerHTML = "Hello javascript";
-}
-
-
 /**
  * 버튼을 누르면 드롭다운 메뉴가 나타남
  */
@@ -42,16 +37,16 @@ function selectNavItem(item) {
  * 버튼을 클릭하면 스크롤 애니메이션으로 이동하고
  * 메뉴바는 처음으로 돌아오는 애니메이션
  */
-function getOffsetTop(el) {
-    var top = 0;
-    if(el.offsetParent){
-        do{
-            top+= 1;
-        } while(el = el.offsetParent);
-        return [top];
-    }
-}
-window.scroll(0, getOffsetTop(document.getElementById("third")));
+// function getOffsetTop(el) {
+//     var top = 0;
+//     if(el.offsetParent){
+//         do{
+//             top+= 1;
+//         } while(el = el.offsetParent);
+//         return [top];
+//     }
+// }
+// window.scroll(0, getOffsetTop(document.getElementById("third")));
 
 
 /**
@@ -66,8 +61,7 @@ function scrolldown(){
     } else {
         document.getElementById("topnav").style.position = "fixed";
     }
-    document.getElementById("first").innerHTML = scrollY;
-    console.log("scroll = " + scrolly);
+    //document.getElementById("first").innerHTML = scrollY;
 }
 
 /**

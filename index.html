@@ -17,10 +17,10 @@
 <nav class="topnav" id="topnav" style="z-index: 2">
     <div>
         <ul id="my_menu_bar" class="menu_bar">
-            <li id="btn_intro" onclick="selectNavItem(this)"><a href="#intro">Intro</a></li>
-            <li id="btn_first" onclick="selectNavItem(this)"><a href="#section1">First</a></li>
-            <li id="btn_second" onclick="selectNavItem(this)"><a href="#section2">Second</a></li>
-            <li id="btn_third" onclick="selectNavItem(this)"><a href="#section3">Third</a></li>
+            <li id="btn_intro" onclick="selectNavItem(this)"><a href="#intro">처음</a></li>
+            <li id="btn_first" onclick="selectNavItem(this)"><a href="#section1">안내</a></li>
+            <li id="btn_second" onclick="selectNavItem(this)"><a href="#section2">감성</a></li>
+            <li id="btn_third" onclick="selectNavItem(this)"><a href="#section3">디자인</a></li>
             <!--<li id="about" style="float:right" onclick="awesomeFunction()"><a class="activie" href="#about">ABOUT</a></li>-->
             <li class="icon">
                 <a href="javascript:void(0);" onclick="dropDownMenu()">&#9776;</a>
@@ -34,55 +34,41 @@
     <div class="content">
         <section id="intro">
             <div class="slideShow">
-                <img class="mySlides" src="basicDatas/images/img_1.png" style="width: 100%">
-                <img class="mySlides" src="basicDatas/images/img_2.png" style="width: 100%">
-                <img class="mySlides" src="basicDatas/images/img_3.png" style="width: 100%">
             </div>
         </section>
-        <script src="javascript/imgSlideShow.js"></script>
+
         <div>
             <section id="section1">
                 <div class="content_child">
-                    <p class="section_p">First <span id="first">0</span> times</p>
+                    <p class="section_p">
+                        현재 웹을 공부하는 중입니다<br/>
+                        <br/>
+                        감성을 디자인 합니다<br/><br/>
+                        한달 뒤면 완성합니다
+                    </p>
                 </div>
             </section>
             <section id="section2">
                 <div class="content_child">
                     <!--여기부터는 이미지 슬라이더-->
                     <div id="slider">
-                        <div id="slider-wrapper">
-                            <div class="slide">
-                                <img src="basicDatas/images/img_1.png">
-                                <p class="caption">Caption1</p>
-                            </div>
-                            <div class="slide">
-                                <img src="basicDatas/images/img_2.png">
-                                <p class="caption">Caption2</p>
-                            </div>
-                            <div class="slide">
-                                <img src="basicDatas/images/img_3.png">
-                                <p class="caption">Caption3</p>
-                            </div>
-                        </div>
-                        <div id="slider-nav">
-                            <a href="#" data-slide="0">1</a>
-                            <a href="#" data-slide="1">2</a>
-                            <a href="#" data-slide="2">3</a>
-                        </div>
+                        <div id="slider-wrapper"></div>
+                        <div id="slider-nav"></div>
                     </div>
                 </div>
             </section>
             <section id="section3">
                 <div class="content_child">
-                    <p class="section_p">Third</p>
+                    <p class="section_p">The End</p>
                 </div>
             </section>
         </div>
+        <script src="javascript/imgSlideShow.js"></script>
     </div>
     <footer>
-        <div class="office_logo">office_logo</div>
-        <div class="office_address">office_address</div>
-        <div class="copyright">copyright</div>
+        <div class="office_logo">한복이랑</div>
+        <div class="office_address">서울시 중구 퇴계로 36길 2 충무로 영상센터 428호</div>
+        <!--<div class="copyright">copyright</div>-->
     </footer>
 
 </div>
